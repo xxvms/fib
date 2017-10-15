@@ -3,4 +3,4 @@ project(Fib)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Fib main.cpp)
+add_executable(Fib main.cpp libfibonacci.cpp libfibonacci.h)

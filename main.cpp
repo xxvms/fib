@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-
-std::vector<int> fib(int n, int seed1, int seed2);
+#include "libfibonacci.h"
 
 int main() {
 
@@ -24,19 +23,3 @@ int main() {
     return 0;
 }
 
-std::vector<int> fib(int n, int seed1, int seed2){
-
-    std::vector<int>fibonacci;
-    fibonacci.push_back(seed1);
-    fibonacci.push_back(seed2);
-
-
-    for (int i = 1; i < n; i++){
-
-        fibonacci.push_back(fibonacci.at(i-1) + fibonacci.at(i));
-
-    }
-
-    return fibonacci;
-
-}
