@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> fib(int n);
+std::vector<int> fib(int n, int seed1, int seed2);
 
 int main() {
 
@@ -10,22 +10,26 @@ int main() {
     int number = 0;
     std::cin >> number;
 
-    for (size_t i = 0; i < fib(number).size(); i++){
+    std::cout << "Please provide 1st seed number: ";
+    int seed_number = 0;
+    std::cin >> seed_number;
 
-        std::cout << fib(number).at(i) << '\n';
-    }
+    std::cout << "Please provide 2nd seed number: ";
+    int seed_number2 = 0;
+    std::cin >> seed_number2;
+
+    fib(number, seed_number, seed_number2);
+
 
     return 0;
 }
 
-std::vector<int> fib(int n){
+std::vector<int> fib(int n, int seed1, int seed2){
 
     std::vector<int>fibonacci;
+    fibonacci.push_back(seed1);
+    fibonacci.push_back(seed2);
 
-    for (int i = 0; i < 2; i++){
-
-        fibonacci.push_back(i);
-    }
 
     for (int i = 1; i < n; i++){
 
